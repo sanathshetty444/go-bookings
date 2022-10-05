@@ -1,0 +1,12 @@
+{{template "base" .}}
+
+{{define "content"}}
+    <h1>About Page</h1>
+    {{index .StringMap "test"}}
+
+    {{if ne (index .StringMap "remoteIP") ""}}
+        {{index .StringMap "remoteIP"}}
+    {{else}}
+        LOL
+    {{end}}
+{{end}}
